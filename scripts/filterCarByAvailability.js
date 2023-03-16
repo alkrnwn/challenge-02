@@ -7,11 +7,13 @@ function filterCarByAvailability(cars) {
 
   // Mengiterasi setiap objek mobil pada array cars
   for (let i = 0; i < cars.length; i++) {
-    // Jika availability pada objek mobil saat ini adalah true, maka tambahkan objek tersebut ke dalam array result
-    if (cars[i].availability) {
+    if (cars[i].available) {
       result.push(cars[i]);
     }
   }
+
+  console.log(result);
+  console.table(result);
 
   // Mengembalikan array result yang berisi objek-objek mobil yang ketersediaannya adalah true
   return result;
